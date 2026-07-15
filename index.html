@@ -1,0 +1,603 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dra. Gerlany Melo | Estética Avançada e Botox Estratégico</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='50' r='50' fill='%239B111E'/><text x='50' y='67' font-family='Georgia, serif' font-size='45' font-weight='bold' fill='%23F5F5F5' text-anchor='middle'>GM</text></svg>">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        carmine: {
+                            DEFAULT: '#9B111E',
+                            hover: '#8A0303',
+                            light: '#b7202e'
+                        },
+                        darkbg: '#121212',
+                        cardbg: '#1A1A1A',
+                        rosegold: '#C07C74',
+                        lighttext: '#F5F5F5',
+                        muted: '#A0A0A0'
+                    },
+                    fontFamily: {
+                        serif: ['"Playfair Display"', 'serif'],
+                        sans: ['Montserrat', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        body {
+            background-color: #121212;
+            color: #F5F5F5;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        /* Fade-in Animation Classes */
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s ease-out;
+        }
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Custom Scrollbar for Elegance */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #121212;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #2a2a2a;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #9B111E;
+        }
+
+        /* Image Placeholder Gradients (Until real photos are inserted) */
+        .img-placeholder-hero {
+            background: linear-gradient(135deg, #1a1a1a 0%, #2a2a2a 100%);
+            border-left: 2px solid #C07C74;
+        }
+        .img-placeholder-about {
+            background: linear-gradient(135deg, #2a2a2a 0%, #1a1a1a 100%);
+            border: 1px solid #333;
+        }
+
+        /* Accordion transition */
+        .accordion-content {
+            transition: max-height 0.3s ease-in-out, opacity 0.3s ease-in-out;
+            max-height: 0;
+            opacity: 0;
+            overflow: hidden;
+        }
+        .accordion-content.open {
+            max-height: 500px; /* arbitrary large value */
+            opacity: 1;
+        }
+
+        /* Hover glows */
+        .card-hover:hover {
+            box-shadow: 0 0 20px rgba(155, 17, 30, 0.15);
+            border-color: rgba(155, 17, 30, 0.4);
+            transform: translateY(-5px);
+            transition: all 0.3s ease;
+        }
+    </style>
+</head>
+<body class="font-sans antialiased overflow-x-hidden selection:bg-carmine selection:text-white">
+
+    <nav class="fixed w-full z-50 transition-all duration-300 backdrop-blur-md bg-darkbg/80 border-b border-white/5 py-4" id="navbar">
+        <div class="container mx-auto px-6 lg:px-12 flex justify-between items-center">
+            <div class="text-xl md:text-2xl font-serif font-semibold tracking-wide flex items-center gap-2 text-white">
+                <span class="text-rosegold text-sm"><i class="fa-solid fa-sparkles"></i></span>
+                Dra. Gerlany Melo
+            </div>
+            <a href="https://wa.me/5585999656010?text=Olá,%20gostaria%20de%20agendar%20uma%20avaliação." target="_blank" class="hidden md:flex items-center gap-2 bg-transparent border border-carmine text-carmine hover:bg-carmine hover:text-white transition-colors duration-300 px-5 py-2 rounded-full font-medium text-sm">
+                <i class="fa-brands fa-whatsapp text-lg"></i>
+                Agendar Avaliação
+            </a>
+        </div>
+    </nav>
+
+    <header class="relative min-h-[90vh] flex items-center pt-20 overflow-hidden">
+        <!-- Background accents -->
+        <div class="absolute top-0 left-0 w-full h-full overflow-hidden -z-10 pointer-events-none">
+            <div class="absolute -top-[20%] -left-[10%] w-[50%] h-[50%] rounded-full bg-carmine/5 blur-[120px]"></div>
+            <div class="absolute bottom-[10%] -right-[10%] w-[40%] h-[60%] rounded-full bg-rosegold/5 blur-[100px]"></div>
+        </div>
+
+        <div class="container mx-auto px-6 lg:px-12 grid lg:grid-cols-2 gap-12 items-center">
+            <div class="order-2 lg:order-1 reveal space-y-8">
+                <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-white/10 bg-white/5 text-rosegold text-xs tracking-widest uppercase font-medium">
+                    <i class="fa-solid fa-star text-[10px]"></i>
+                    20 anos cuidando da beleza feminina
+                </div>
+                
+                <h1 class="text-4xl md:text-5xl lg:text-6xl font-serif leading-[1.1] text-white">
+                    Realce sua beleza natural com <span class="text-carmine italic">segurança</span> e precisão.
+                </h1>
+                
+                <p class="text-muted text-base md:text-lg leading-relaxed max-w-xl">
+                    O <strong class="text-lighttext font-semibold">Botox Estratégico</strong> não transforma quem você é, apenas suaviza as marcas do tempo. Descubra um cuidado focado na naturalidade, na elegância e na harmonia do seu rosto.
+                </p>
+                
+                <div class="flex flex-col sm:flex-row gap-4 pt-4">
+                    <a href="https://wa.me/5585999656010?text=Olá,%20gostaria%20de%20agendar%20uma%20avaliação." target="_blank" class="bg-carmine hover:bg-carmine-hover text-white px-8 py-4 rounded-full font-medium transition-all shadow-[0_0_20px_rgba(155,17,30,0.3)] flex items-center justify-center gap-3 group">
+                        Agendar minha avaliação
+                        <i class="fa-brands fa-whatsapp text-xl group-hover:scale-110 transition-transform"></i>
+                    </a>
+                </div>
+                
+                <div class="flex items-center gap-4 pt-6 opacity-70">
+                    <div class="flex -space-x-2">
+                        <img src="cli1.png" alt="Paciente" class="w-8 h-8 rounded-full border-2 border-darkbg object-cover">
+                        <img src="cli2.png" alt="Paciente" class="w-8 h-8 rounded-full border-2 border-darkbg object-cover">
+                        <img src="cli3.png" alt="Paciente" class="w-8 h-8 rounded-full border-2 border-darkbg object-cover">
+                    </div>
+                    <p class="text-sm text-muted">Amada por pacientes em Fortaleza</p>
+                </div>
+            </div>
+            
+            <div class="order-1 lg:order-2 relative reveal reveal-delay-200 h-[50vh] lg:h-[80vh] w-full rounded-2xl overflow-hidden border border-white/10 shadow-2xl group">
+                <img src="ft8_2.png" alt="Dra. Gerlany Melo" class="w-full h-full object-cover object-top transition-transform duration-700 group-hover:scale-105">
+                <!-- Overlay gradient para mesclar a foto suavemente com o fundo escuro -->
+                <div class="absolute inset-0 bg-gradient-to-t from-darkbg via-transparent to-transparent opacity-60 pointer-events-none"></div>
+            </div>
+        </div>
+    </header>
+
+    <section class="py-24 bg-cardbg/30 border-y border-white/5 relative">
+        <div class="container mx-auto px-6 lg:px-12">
+            <div class="text-center max-w-3xl mx-auto mb-16 reveal">
+                <h2 class="text-3xl md:text-4xl font-serif mb-6 text-white">Por que o <span class="text-carmine">Botox Estratégico</span> é diferente?</h2>
+                <p class="text-muted leading-relaxed">
+                    Acreditamos que a verdadeira beleza está em envelhecer bem, preservando a sua identidade. Nosso método foge de padronizações e foca no que o seu rosto especificamente precisa.
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Differential 1 -->
+                <div class="p-8 rounded-2xl bg-cardbg border border-white/5 hover:border-rosegold/30 transition-colors reveal">
+                    <div class="w-12 h-12 rounded-full bg-rosegold/10 text-rosegold flex items-center justify-center text-xl mb-6">
+                        <i class="fa-solid fa-face-smile"></i>
+                    </div>
+                    <h3 class="text-xl font-serif text-white mb-3">Mapeamento Individualizado</h3>
+                    <p class="text-muted text-sm leading-relaxed">Avaliamos a força muscular e a anatomia única do seu rosto antes de qualquer procedimento.</p>
+                </div>
+
+                <!-- Differential 2 -->
+                <div class="p-8 rounded-2xl bg-cardbg border border-white/5 hover:border-rosegold/30 transition-colors reveal delay-100">
+                    <div class="w-12 h-12 rounded-full bg-rosegold/10 text-rosegold flex items-center justify-center text-xl mb-6">
+                        <i class="fa-solid fa-leaf"></i>
+                    </div>
+                    <h3 class="text-xl font-serif text-white mb-3">Foco na Naturalidade</h3>
+                    <p class="text-muted text-sm leading-relaxed">O objetivo não é paralisar expressões, mas proporcionar um aspecto descansado e leve.</p>
+                </div>
+
+                <!-- Differential 3 -->
+                <div class="p-8 rounded-2xl bg-cardbg border border-white/5 hover:border-rosegold/30 transition-colors reveal delay-200">
+                    <div class="w-12 h-12 rounded-full bg-rosegold/10 text-rosegold flex items-center justify-center text-xl mb-6">
+                        <i class="fa-solid fa-shield-halved"></i>
+                    </div>
+                    <h3 class="text-xl font-serif text-white mb-3">Prevenção Inteligente</h3>
+                    <p class="text-muted text-sm leading-relaxed">Cuidamos das linhas existentes e prevenimos que novas marcas se tornem profundas.</p>
+                </div>
+
+                <!-- Differential 4 -->
+                <div class="p-8 rounded-2xl bg-cardbg border border-white/5 hover:border-rosegold/30 transition-colors reveal delay-300">
+                    <div class="w-12 h-12 rounded-full bg-rosegold/10 text-rosegold flex items-center justify-center text-xl mb-6">
+                        <i class="fa-solid fa-handshake-angle"></i>
+                    </div>
+                    <h3 class="text-xl font-serif text-white mb-3">Transparência e Segurança</h3>
+                    <p class="text-muted text-sm leading-relaxed">Explicamos cada etapa do plano de tratamento, respeitando seus limites e desejos.</p>
+                </div>
+            </div>
+            
+            <div class="text-center mt-12 reveal">
+                <a href="https://wa.me/5585999656010" target="_blank" class="inline-flex items-center gap-2 text-rosegold hover:text-white transition-colors border-b border-rosegold/30 hover:border-white pb-1 font-medium">
+                    Conversar com a nossa equipe <i class="fa-solid fa-arrow-right text-sm"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-24 relative overflow-hidden">
+        <div class="container mx-auto px-6 lg:px-12">
+            <div class="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6 reveal">
+                <div class="max-w-2xl">
+                    <span class="text-carmine text-sm font-semibold tracking-wider uppercase mb-2 block">Protocolos</span>
+                    <h2 class="text-3xl md:text-4xl font-serif text-white">Procedimentos focados<br>na sua <span class="italic text-rosegold">melhor versão</span></h2>
+                </div>
+                <p class="text-muted text-sm md:text-base max-w-sm">Tratamentos de estética avançada realizados com rigor científico e produtos de excelência global.</p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Service 1 -->
+                <div class="bg-cardbg rounded-2xl p-8 border border-white/5 card-hover reveal">
+                    <div class="h-48 rounded-xl bg-darkbg mb-6 flex items-center justify-center border border-white/5">
+                        <i class="fa-solid fa-syringe text-4xl text-carmine/50"></i>
+                    </div>
+                    <h3 class="text-2xl font-serif text-white mb-4">Botox Estratégico</h3>
+                    <p class="text-muted text-sm leading-relaxed mb-6">Aplicação precisa da toxina botulínica para suavizar rugas dinâmicas, reposicionar estruturas e prevenir o envelhecimento precoce da pele.</p>
+                    <a href="https://wa.me/5585999656010" target="_blank" class="text-carmine text-sm font-medium hover:text-carmine-light transition-colors flex items-center gap-2">
+                        Saber mais <i class="fa-solid fa-chevron-right text-xs"></i>
+                    </a>
+                </div>
+
+                <!-- Service 2 -->
+                <div class="bg-cardbg rounded-2xl p-8 border border-white/5 card-hover reveal delay-100">
+                    <div class="h-48 rounded-xl bg-darkbg mb-6 flex items-center justify-center border border-white/5">
+                        <i class="fa-solid fa-dna text-4xl text-carmine/50"></i>
+                    </div>
+                    <h3 class="text-2xl font-serif text-white mb-4">Bioestimulação</h3>
+                    <p class="text-muted text-sm leading-relaxed mb-6">Tratamento focado em devolver a firmeza da pele e combater a flacidez facial de forma progressiva e duradoura, estimulando o colágeno natural.</p>
+                    <a href="https://wa.me/5585999656010" target="_blank" class="text-carmine text-sm font-medium hover:text-carmine-light transition-colors flex items-center gap-2">
+                        Saber mais <i class="fa-solid fa-chevron-right text-xs"></i>
+                    </a>
+                </div>
+
+                <!-- Service 3 -->
+                <div class="bg-cardbg rounded-2xl p-8 border border-white/5 card-hover reveal delay-200">
+                    <div class="h-48 rounded-xl bg-darkbg mb-6 flex items-center justify-center border border-white/5">
+                        <i class="fa-solid fa-droplet text-4xl text-carmine/50"></i>
+                    </div>
+                    <h3 class="text-2xl font-serif text-white mb-4">Skinbooster</h3>
+                    <p class="text-muted text-sm leading-relaxed mb-6">Gerenciamento de pele através de hidratação injetável profunda para melhorar drasticamente o viço, a textura e a qualidade geral da sua pele.</p>
+                    <a href="https://wa.me/5585999656010" target="_blank" class="text-carmine text-sm font-medium hover:text-carmine-light transition-colors flex items-center gap-2">
+                        Saber mais <i class="fa-solid fa-chevron-right text-xs"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-24 bg-cardbg/40 border-y border-white/5">
+        <div class="container mx-auto px-6 lg:px-12">
+            <div class="grid lg:grid-cols-2 gap-16 items-center">
+                <div class="relative reveal h-[500px] rounded-2xl overflow-hidden border border-white/10 shadow-lg order-2 lg:order-1 group">
+                    <img src="ft6.jpg" alt="Dra. Gerlany Melo na Clínica" class="w-full h-full object-cover object-center transition-transform duration-700 group-hover:scale-105">
+                    <!-- Leve escurecimento que some ao passar o mouse -->
+                    <div class="absolute inset-0 bg-darkbg/10 pointer-events-none group-hover:bg-transparent transition-colors duration-500"></div>
+                </div>
+
+                <div class="reveal order-1 lg:order-2 space-y-6">
+                    <h2 class="text-3xl md:text-4xl font-serif text-white">Sobre a <span class="italic text-rosegold">Especialista</span></h2>
+                    <h3 class="text-xl text-white/80 font-medium border-l-2 border-carmine pl-4">Dra. Gerlany Melo</h3>
+                    
+                    <div class="space-y-4 text-muted leading-relaxed">
+                        <p>
+                            O meu compromisso é com a sua segurança e a sua autoestima. Como especialista em estética avançada, minha atuação é pautada na ciência, na ética e no bom senso. 
+                        </p>
+                        <p>
+                            Não busco entregar resultados artificiais, mas sim oferecer tratamentos que resgatem a sua autoconfiança para que você se sinta bem toda vez que se olhar no espelho. 
+                        </p>
+                        <p>
+                            Com 20 anos de dedicação à beleza feminina, entendo que cada paciente é única. É exatamente assim que você será tratada aqui: com exclusividade e profundo respeito à sua essência anatômica.
+                        </p>
+                    </div>
+
+                    <div class="pt-6">
+                        <a href="https://wa.me/5585999656010" target="_blank" class="inline-flex items-center gap-3 bg-white/5 hover:bg-white/10 border border-white/10 px-6 py-3 rounded-full text-white transition-colors">
+                            Agendar uma consulta <i class="fa-regular fa-calendar-check text-rosegold"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-24 relative overflow-hidden">
+        <!-- Decorator -->
+        <div class="absolute top-0 right-0 w-96 h-96 bg-carmine/5 rounded-full blur-[100px] -z-10 pointer-events-none"></div>
+
+        <div class="container mx-auto px-6 lg:px-12">
+            <div class="text-center max-w-2xl mx-auto mb-16 reveal">
+                <span class="flex justify-center text-rosegold gap-1 text-lg mb-4">
+                    <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                </span>
+                <h2 class="text-3xl md:text-4xl font-serif text-white mb-4">A transformação de quem confiou em nosso método.</h2>
+                <p class="text-muted">Avaliações reais de pacientes que vivenciaram a experiência do Botox Estratégico.</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-2 gap-6 max-w-5xl mx-auto">
+                <!-- Testimonial 1 -->
+                <div class="bg-cardbg border border-white/5 p-8 rounded-2xl reveal">
+                    <div class="flex items-center gap-4 mb-6">
+                        <div class="w-12 h-12 rounded-full bg-darkbg border border-white/10 flex items-center justify-center text-xl text-white font-serif font-bold">R</div>
+                        <div>
+                            <h4 class="text-white font-medium">Ribamar Melo</h4>
+                            <span class="text-xs text-muted">5 meses atrás</span>
+                        </div>
+                    </div>
+                    <p class="text-muted text-sm italic leading-relaxed">
+                        "Foi maravilhosa, atendimento no horário, respeito com o cliente, higiene, um <strong class="text-white font-medium">ambiente relaxante</strong>, além da profissional muito competente, preparada e ciente daquilo que faz, experiência sem igual."
+                    </p>
+                </div>
+
+                <!-- Testimonial 2 -->
+                <div class="bg-cardbg border border-white/5 p-8 rounded-2xl reveal delay-100">
+                    <div class="flex items-center gap-4 mb-6">
+                        <div class="w-12 h-12 rounded-full bg-darkbg border border-white/10 flex items-center justify-center text-xl text-white font-serif font-bold">M</div>
+                        <div>
+                            <h4 class="text-white font-medium">Mariana Costa</h4>
+                            <span class="text-xs text-muted">5 meses atrás</span>
+                        </div>
+                    </div>
+                    <p class="text-muted text-sm italic leading-relaxed">
+                        "A melhor biomédica e esteticista dessa cidade. <strong class="text-white font-medium">Competente e honesta</strong>, amo o seu trabalho, seu espaço acolhedor e seu atendimento. Recomendo demais!!"
+                    </p>
+                </div>
+
+                <!-- Testimonial 3 -->
+                <div class="bg-cardbg border border-white/5 p-8 rounded-2xl reveal">
+                    <div class="flex items-center gap-4 mb-6">
+                        <div class="w-12 h-12 rounded-full bg-darkbg border border-white/10 flex items-center justify-center text-xl text-white font-serif font-bold">T</div>
+                        <div>
+                            <h4 class="text-white font-medium">Thays Vitoria</h4>
+                            <span class="text-xs text-muted">5 meses atrás</span>
+                        </div>
+                    </div>
+                    <p class="text-muted text-sm italic leading-relaxed">
+                        "Uma excelente profissional, muito atenciosa e os <strong class="text-white font-medium">procedimentos são impecáveis</strong>, sempre me surpreendo 🥰"
+                    </p>
+                </div>
+
+                <!-- Testimonial 4 -->
+                <div class="bg-cardbg border border-white/5 p-8 rounded-2xl reveal delay-100">
+                    <div class="flex items-center gap-4 mb-6">
+                        <div class="w-12 h-12 rounded-full bg-darkbg border border-white/10 flex items-center justify-center text-xl text-white font-serif font-bold">D</div>
+                        <div>
+                            <h4 class="text-white font-medium">Daiane Menezes</h4>
+                            <span class="text-xs text-muted">2 meses atrás</span>
+                        </div>
+                    </div>
+                    <p class="text-muted text-sm italic leading-relaxed">
+                        "Uma profissional excepcional. <strong class="text-white font-medium">Ambiente limpo, organizado, agradável e muito acolhedor.</strong>"
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-24 bg-cardbg/30 border-y border-white/5">
+        <div class="container mx-auto px-6 lg:px-12 max-w-4xl">
+            <div class="text-center mb-16 reveal">
+                <h2 class="text-3xl md:text-4xl font-serif text-white mb-4">Ficou alguma dúvida? Nós respondemos.</h2>
+                <p class="text-muted">Transparência desde o primeiro momento.</p>
+            </div>
+
+            <div class="space-y-4 reveal">
+                <!-- FAQ Item 1 -->
+                <div class="border border-white/10 rounded-xl bg-darkbg overflow-hidden">
+                    <button class="faq-btn w-full px-6 py-5 text-left flex justify-between items-center focus:outline-none hover:bg-white/5 transition-colors">
+                        <span class="font-medium text-white pr-4">O procedimento deixa o rosto sem expressão (congelado)?</span>
+                        <i class="fa-solid fa-chevron-down text-rosegold transition-transform duration-300"></i>
+                    </button>
+                    <div class="accordion-content bg-cardbg/50">
+                        <div class="px-6 pb-5 pt-2 text-muted text-sm leading-relaxed">
+                            Não. O Botox Estratégico é planejado para relaxar apenas os músculos necessários, preservando as suas expressões naturais e garantindo um visual leve e descansado.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 2 -->
+                <div class="border border-white/10 rounded-xl bg-darkbg overflow-hidden">
+                    <button class="faq-btn w-full px-6 py-5 text-left flex justify-between items-center focus:outline-none hover:bg-white/5 transition-colors">
+                        <span class="font-medium text-white pr-4">Quanto tempo duram os resultados do Botox?</span>
+                        <i class="fa-solid fa-chevron-down text-rosegold transition-transform duration-300"></i>
+                    </button>
+                    <div class="accordion-content bg-cardbg/50">
+                        <div class="px-6 pb-5 pt-2 text-muted text-sm leading-relaxed">
+                            A duração média é de 3 a 5 meses. Esse tempo pode variar de acordo com o organismo de cada paciente, estilo de vida, metabolismo e força muscular na área tratada.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 3 -->
+                <div class="border border-white/10 rounded-xl bg-darkbg overflow-hidden">
+                    <button class="faq-btn w-full px-6 py-5 text-left flex justify-between items-center focus:outline-none hover:bg-white/5 transition-colors">
+                        <span class="font-medium text-white pr-4">O procedimento é muito doloroso?</span>
+                        <i class="fa-solid fa-chevron-down text-rosegold transition-transform duration-300"></i>
+                    </button>
+                    <div class="accordion-content bg-cardbg/50">
+                        <div class="px-6 pb-5 pt-2 text-muted text-sm leading-relaxed">
+                            A aplicação é rápida e utilizamos agulhas extremamente finas (agulhas invisíveis), além de técnicas de conforto (como gelo ou anestésicos tópicos) para tornar a experiência a mais tranquila e indolor possível.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 4 -->
+                <div class="border border-white/10 rounded-xl bg-darkbg overflow-hidden">
+                    <button class="faq-btn w-full px-6 py-5 text-left flex justify-between items-center focus:outline-none hover:bg-white/5 transition-colors">
+                        <span class="font-medium text-white pr-4">Como funciona a avaliação?</span>
+                        <i class="fa-solid fa-chevron-down text-rosegold transition-transform duration-300"></i>
+                    </button>
+                    <div class="accordion-content bg-cardbg/50">
+                        <div class="px-6 pb-5 pt-2 text-muted text-sm leading-relaxed">
+                            Na avaliação presencial, conversaremos sobre seus incômodos, analisaremos a anatomia do seu rosto com fotos e montaremos um plano de tratamento totalmente personalizado, sem pressão e com total transparência de valores e expectativas.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-darkbg pt-20 pb-10 border-t border-white/10">
+        <div class="container mx-auto px-6 lg:px-12">
+            <!-- Final CTA -->
+            <div class="text-center max-w-3xl mx-auto mb-20 reveal">
+                <h2 class="text-3xl md:text-4xl font-serif text-white mb-6">Pronta para dar o primeiro passo rumo à sua melhor versão?</h2>
+                <p class="text-muted mb-8">Nossa equipe está à disposição no WhatsApp para tirar suas dúvidas finais e encontrar o melhor horário para a sua avaliação.</p>
+                <a href="https://wa.me/5585999656010?text=Olá,%20gostaria%20de%20agendar%20uma%20avaliação." target="_blank" class="inline-flex items-center justify-center gap-3 bg-carmine hover:bg-carmine-hover text-white px-8 py-4 rounded-full font-medium transition-all shadow-[0_0_20px_rgba(155,17,30,0.3)] hover:scale-105">
+                    Falar agora no WhatsApp
+                    <i class="fa-brands fa-whatsapp text-xl"></i>
+                </a>
+            </div>
+
+            <div class="grid md:grid-cols-12 gap-10 border-t border-white/10 pt-12">
+                <!-- Brand Info -->
+                <div class="md:col-span-4 space-y-4">
+                    <div class="text-2xl font-serif font-semibold text-white flex items-center gap-2">
+                        <span class="text-rosegold text-sm"><i class="fa-solid fa-sparkles"></i></span>
+                        Dra. Gerlany Melo
+                    </div>
+                    <p class="text-muted text-sm leading-relaxed max-w-sm">
+                        Biomédica Especialista em Estética Avançada e Botox Estratégico. 20 anos cuidando da beleza feminina com ciência e naturalidade.
+                    </p>
+                </div>
+
+                <!-- Contact, Hours & Location -->
+                <div class="md:col-span-8 grid sm:grid-cols-3 gap-8">
+                    <!-- Contato -->
+                    <div>
+                        <h4 class="text-white font-serif mb-4 text-lg">Contato</h4>
+                        <ul class="space-y-3 text-sm text-muted">
+                            <li>
+                                <a href="https://wa.me/5585999656010?text=Olá,%20gostaria%20de%20agendar%20uma%20avaliação." target="_blank" class="hover:text-white transition-colors flex items-center gap-2">
+                                    <i class="fa-brands fa-whatsapp text-rosegold w-4 text-center"></i> (85) 99965-6010
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://www.instagram.com/dra.gerlanymelo/" target="_blank" class="hover:text-white transition-colors flex items-center gap-2">
+                                    <i class="fa-brands fa-instagram text-rosegold w-4 text-center"></i> @dra.gerlanymelo
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Horários -->
+                    <div>
+                        <h4 class="text-white font-serif mb-4 text-lg">Horários</h4>
+                        <ul class="space-y-2 text-sm text-muted">
+                            <li class="flex justify-between border-b border-white/5 pb-1">
+                                <span>Seg - Sex</span><span>08:00 – 19:00</span>
+                            </li>
+                            <li class="flex justify-between border-b border-white/5 pb-1">
+                                <span>Sábado</span><span>08:00 – 16:00</span>
+                            </li>
+                            <li class="flex justify-between text-carmine/80 pt-1">
+                                <span>Domingo</span><span>Fechado</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Localização e Mapa -->
+                    <div>
+                        <h4 class="text-white font-serif mb-4 text-lg">Localização</h4>
+                        <ul class="space-y-3 text-sm text-muted">
+                            <li class="flex items-start gap-2">
+                                <i class="fa-solid fa-location-dot text-rosegold mt-1 w-4 text-center"></i>
+                                <span>Rua Frei Odilon, 348<br>Álvaro Weyne, Fortaleza - CE<br>CEP: 60336-190</span>
+                            </li>
+                        </ul>
+                        
+                        <!-- Google Maps Embed -->
+                        <div class="mt-4 w-full h-24 rounded-lg overflow-hidden border border-white/10 opacity-80 hover:opacity-100 transition-opacity">
+                            <iframe src="https://maps.google.com/maps?q=Rua%20Frei%20Odilon,%20348%20-%20Álvaro%20Weyne,%20Fortaleza%20-%20CE&t=&z=15&ie=UTF8&iwloc=&output=embed" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        </div>
+                        <a href="https://maps.google.com/?q=Rua+Frei+Odilon,+348+-+Álvaro+Weyne,+Fortaleza+-+CE" target="_blank" class="inline-block mt-2 text-rosegold hover:text-white text-xs transition-colors">
+                            Abrir rota no Google Maps
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="border-t border-white/5 mt-12 pt-8 text-center text-xs text-muted/60">
+                &copy; <span id="year"></span> Dra. Gerlany Melo. Todos os direitos reservados.
+                <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+            </div>
+        </div>
+    </footer>
+
+    <a href="https://wa.me/5585999656010?text=Olá,%20gostaria%20de%20agendar%20uma%20avaliação." target="_blank" aria-label="Falar no WhatsApp" class="fixed bottom-6 right-6 z-50 bg-[#25D366] hover:bg-[#20b858] text-white w-14 h-14 rounded-full flex items-center justify-center text-3xl shadow-lg shadow-[#25D366]/30 transition-transform hover:scale-110 animate-bounce cursor-pointer group">
+        <i class="fa-brands fa-whatsapp"></i>
+        <!-- Tooltip -->
+        <span class="absolute right-16 bg-cardbg text-white text-xs px-3 py-2 rounded shadow-lg border border-white/10 opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap pointer-events-none">
+            Fale conosco
+        </span>
+    </a>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            
+            // 1. FAQ Accordion Logic
+            const faqBtns = document.querySelectorAll('.faq-btn');
+            
+            faqBtns.forEach(btn => {
+                btn.addEventListener('click', () => {
+                    const content = btn.nextElementSibling;
+                    const icon = btn.querySelector('i');
+                    
+                    // Close all others
+                    faqBtns.forEach(otherBtn => {
+                        if(otherBtn !== btn) {
+                            otherBtn.nextElementSibling.classList.remove('open');
+                            otherBtn.querySelector('i').style.transform = 'rotate(0deg)';
+                        }
+                    });
+
+                    // Toggle current
+                    content.classList.toggle('open');
+                    if (content.classList.contains('open')) {
+                        icon.style.transform = 'rotate(180deg)';
+                    } else {
+                        icon.style.transform = 'rotate(0deg)';
+                    }
+                });
+            });
+
+            // 2. Scroll Reveal Animation Logic
+            const revealElements = document.querySelectorAll('.reveal');
+            
+            const revealOptions = {
+                threshold: 0.15,
+                rootMargin: "0px 0px -50px 0px"
+            };
+
+            const revealOnScroll = new IntersectionObserver(function(entries, observer) {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('active');
+                        observer.unobserve(entry.target); // Only animate once
+                    }
+                });
+            }, revealOptions);
+
+            revealElements.forEach(el => {
+                revealOnScroll.observe(el);
+            });
+
+            // 3. Navbar scroll effect
+            const navbar = document.getElementById('navbar');
+            window.addEventListener('scroll', () => {
+                if (window.scrollY > 50) {
+                    navbar.classList.add('shadow-lg');
+                    navbar.classList.replace('py-4', 'py-2');
+                } else {
+                    navbar.classList.remove('shadow-lg');
+                    navbar.classList.replace('py-2', 'py-4');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
