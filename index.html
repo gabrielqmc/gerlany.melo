@@ -23,7 +23,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Manrope:wght@300;400;500;600&display=swap" rel="stylesheet">
 
-    <link rel="preload" as="image" href="assets/img/hero-1000.webp" imagesrcset="assets/img/hero-1000.webp 1000w, assets/img/hero.webp 1600w" imagesizes="(max-width: 900px) 100vw, 60vw">
+    <link rel="preload" as="image" href="assets/img/hero-1000.webp" imagesrcset="assets/img/hero-1000.webp 1000w, assets/img/hero.webp 1600w" imagesizes="(max-width: 900px) 100vw, 55vw">
     <link rel="stylesheet" href="assets/css/style.css">
     <script>document.documentElement.classList.add('js');</script>
 
@@ -92,7 +92,7 @@
                 <a href="#depoimentos">Depoimentos</a>
                 <a href="#duvidas">Dúvidas</a>
             </nav>
-            <a href="https://wa.me/5585999656010?text=Ol%C3%A1,%20gostaria%20de%20agendar%20uma%20avalia%C3%A7%C3%A3o." target="_blank" rel="noopener" class="btn btn--sm btn--glass nav__cta" data-magnetic>
+            <a href="https://wa.me/5585999656010?text=Ol%C3%A1,%20gostaria%20de%20agendar%20uma%20avalia%C3%A7%C3%A3o." target="_blank" rel="noopener" class="btn btn--sm btn--dark nav__cta" data-magnetic>
                 <span>Agendar avaliação</span>
                 <svg class="icon"><use href="#i-wa"/></svg>
             </a>
@@ -124,53 +124,44 @@
 
         <!-- ============ HERO ============ -->
         <section class="hero" id="topo" aria-label="Apresentação">
-            <div class="hero__frame">
-                <div class="hero__media" data-hero-media>
-                    <img src="assets/img/hero-1000.webp" srcset="assets/img/hero-1000.webp 1000w, assets/img/hero.webp 1600w" sizes="(max-width: 900px) 100vw, 60vw" alt="Retrato editorial de mulher com pele natural e luminosa" width="1600" height="2000" fetchpriority="high">
-                </div>
-                <div class="hero__veil"></div>
-                <div class="hero__grain"></div>
+            <div class="hero__frame" data-hero>
+                <div class="hero__light" data-hero-light aria-hidden="true"></div>
 
-                <aside class="hero__note hero__note--left" data-hero-in>
-                    <svg class="icon"><use href="#i-spark"/></svg>
-                    <p>Cada protocolo é desenhado para a anatomia única do seu rosto.</p>
-                </aside>
-                <aside class="hero__note hero__note--right" data-hero-in>
-                    <svg class="icon"><use href="#i-spark"/></svg>
-                    <p>Botox Estratégico, Bioestimulação e Skinbooster com ciência e bom senso.</p>
-                </aside>
+                <div class="hero__media" data-hero-media>
+                    <div class="hero__media-inner" data-hero-tilt>
+                        <img src="assets/img/hero-1000.webp" srcset="assets/img/hero-1000.webp 1000w, assets/img/hero.webp 1600w" sizes="(max-width: 900px) 100vw, 55vw" alt="Retrato editorial de mulher com pele natural e luminosa" width="1600" height="2000" fetchpriority="high">
+                    </div>
+                </div>
 
                 <div class="hero__content">
-                    <span class="pill pill--glass" data-hero-in><span class="pill__dot"></span>20 anos cuidando da beleza feminina</span>
-                    <h1 class="hero__title" data-hero-title>
-                        <span class="line"><span>Realce sua beleza</span></span>
-                        <span class="line"><span><em>com segurança</em> e precisão.</span></span>
+                    <span class="hero__eyebrow" data-hero-in><span class="hero__eyebrow-line"></span>20 anos cuidando da beleza feminina</span>
+                    <h1 class="hero__title" aria-label="Realce sua beleza natural com segurança e precisão.">
+                        <span class="line" aria-hidden="true"><span>Realce sua</span></span>
+                        <span class="line" aria-hidden="true"><span>beleza <em>natural</em></span></span>
+                        <span class="line" aria-hidden="true"><span>com segurança</span></span>
+                        <span class="line" aria-hidden="true"><span><em>e precisão.</em></span></span>
                     </h1>
                     <p class="hero__lead" data-hero-in>
                         O <strong>Botox Estratégico</strong> não transforma quem você é, apenas suaviza as marcas do tempo. Um cuidado focado na naturalidade, na elegância e na harmonia do seu rosto.
                     </p>
                     <div class="hero__actions" data-hero-in>
-                        <a href="https://wa.me/5585999656010?text=Ol%C3%A1,%20gostaria%20de%20agendar%20uma%20avalia%C3%A7%C3%A3o." target="_blank" rel="noopener" class="btn btn--light" data-magnetic>
+                        <a href="https://wa.me/5585999656010?text=Ol%C3%A1,%20gostaria%20de%20agendar%20uma%20avalia%C3%A7%C3%A3o." target="_blank" rel="noopener" class="btn btn--dark" data-magnetic>
                             <span>Agendar minha avaliação</span>
                             <svg class="icon"><use href="#i-wa"/></svg>
                         </a>
-                        <a href="#metodo" class="btn btn--ghost-light">
-                            <span>Conhecer o método</span>
-                        </a>
-                    </div>
-                    <div class="hero__proof" data-hero-in>
-                        <div class="avatars">
-                            <img src="cli1.png" alt="" width="90" height="90">
-                            <img src="cli2.png" alt="" width="90" height="90">
-                            <img src="cli3.png" alt="" width="90" height="90">
-                        </div>
-                        <p>Amada por pacientes em Fortaleza</p>
+                        <a href="#metodo" class="link-arrow">Conhecer o método <svg class="icon"><use href="#i-arrow"/></svg></a>
                     </div>
                 </div>
 
-                <a href="#manifesto" class="hero__scroll" aria-label="Rolar para o conteúdo">
-                    <span>Role</span><i></i>
+                <a href="#tratamentos" class="hero__badge" data-hero-in aria-label="Ver tratamentos" data-cursor="Ver">
+                    <svg viewBox="0 0 200 200" class="hero__badge-ring" aria-hidden="true">
+                        <defs><path id="badge-circle" d="M100,100 m-78,0 a78,78 0 1,1 156,0 a78,78 0 1,1 -156,0"/></defs>
+                        <text textLength="486" lengthAdjust="spacingAndGlyphs"><textPath href="#badge-circle" textLength="486" lengthAdjust="spacing">Botox · Bioestimulação · Skinbooster · </textPath></text>
+                    </svg>
+                    <span class="hero__badge-core"><svg class="icon"><use href="#i-arrow-ur"/></svg></span>
                 </a>
+
+                <a href="#manifesto" class="hero__scroll" aria-label="Rolar para o conteúdo"><i></i><span>Role</span></a>
             </div>
         </section>
 
@@ -293,7 +284,7 @@
 
             <div class="treatments__scroller" data-carousel>
                 <div class="treatments__track">
-                    <article class="tcard" data-reveal>
+                    <article class="tcard" data-reveal data-tilt data-cursor="Agendar">
                         <div class="tcard__media">
                             <img src="assets/img/botox-700.webp" srcset="assets/img/botox-700.webp 700w, assets/img/botox.webp 1200w" sizes="(max-width: 900px) 85vw, 33vw" alt="Profissional realizando procedimento estético facial com luvas" loading="lazy" width="1200" height="798">
                         </div>
@@ -311,7 +302,7 @@
                         </div>
                     </article>
 
-                    <article class="tcard tcard--offset" data-reveal>
+                    <article class="tcard tcard--offset" data-reveal data-tilt data-cursor="Agendar">
                         <div class="tcard__media">
                             <img src="assets/img/bio-700.webp" srcset="assets/img/bio-700.webp 700w, assets/img/bio.webp 1200w" sizes="(max-width: 900px) 85vw, 33vw" alt="Textura de creme facial em pote de vidro sobre mármore nude" loading="lazy" width="1200" height="1500">
                         </div>
@@ -329,7 +320,7 @@
                         </div>
                     </article>
 
-                    <article class="tcard" data-reveal>
+                    <article class="tcard" data-reveal data-tilt data-cursor="Agendar">
                         <div class="tcard__media">
                             <img src="assets/img/skinbooster-700.webp" srcset="assets/img/skinbooster-700.webp 700w, assets/img/skinbooster.webp 1200w" sizes="(max-width: 900px) 85vw, 33vw" alt="Gota de sérum dourado aplicada sobre a pele" loading="lazy" width="1200" height="1500">
                         </div>
@@ -350,16 +341,31 @@
             </div>
             <div class="container">
                 <div class="carousel-progress" aria-hidden="true"><span data-carousel-bar></span></div>
-                <ul class="chips" data-reveal aria-label="Objetivos tratados">
-                    <li>Rugas dinâmicas</li>
-                    <li>Prevenção</li>
-                    <li>Firmeza</li>
-                    <li>Flacidez facial</li>
-                    <li>Colágeno natural</li>
-                    <li>Viço</li>
-                    <li>Textura</li>
-                    <li>Hidratação profunda</li>
-                </ul>
+                <div class="tlist" data-tlist>
+                    <a class="tlist__row" href="https://wa.me/5585999656010?text=Ol%C3%A1,%20gostaria%20de%20saber%20mais%20sobre%20o%20Botox%20Estrat%C3%A9gico." target="_blank" rel="noopener" data-index="0" data-cursor="Agendar" data-reveal>
+                        <span class="tlist__num">01</span>
+                        <span class="tlist__name">Botox <em>Estratégico</em></span>
+                        <span class="tlist__info"><span class="tlist__kicker">Toxina botulínica</span><span class="tlist__desc">Aplicação precisa da toxina botulínica para suavizar rugas dinâmicas, reposicionar estruturas e prevenir o envelhecimento precoce da pele.</span></span>
+                        <span class="tlist__arrow"><svg class="icon"><use href="#i-arrow-ur"/></svg></span>
+                    </a>
+                    <a class="tlist__row" href="https://wa.me/5585999656010?text=Ol%C3%A1,%20gostaria%20de%20saber%20mais%20sobre%20Bioestimula%C3%A7%C3%A3o." target="_blank" rel="noopener" data-index="1" data-cursor="Agendar" data-reveal>
+                        <span class="tlist__num">02</span>
+                        <span class="tlist__name"><em>Bioestimulação</em></span>
+                        <span class="tlist__info"><span class="tlist__kicker">Firmeza e colágeno</span><span class="tlist__desc">Tratamento focado em devolver a firmeza da pele e combater a flacidez facial de forma progressiva e duradoura, estimulando o colágeno natural.</span></span>
+                        <span class="tlist__arrow"><svg class="icon"><use href="#i-arrow-ur"/></svg></span>
+                    </a>
+                    <a class="tlist__row" href="https://wa.me/5585999656010?text=Ol%C3%A1,%20gostaria%20de%20saber%20mais%20sobre%20Skinbooster." target="_blank" rel="noopener" data-index="2" data-cursor="Agendar" data-reveal>
+                        <span class="tlist__num">03</span>
+                        <span class="tlist__name">Skin<em>booster</em></span>
+                        <span class="tlist__info"><span class="tlist__kicker">Hidratação injetável</span><span class="tlist__desc">Gerenciamento de pele através de hidratação injetável profunda para melhorar drasticamente o viço, a textura e a qualidade geral da sua pele.</span></span>
+                        <span class="tlist__arrow"><svg class="icon"><use href="#i-arrow-ur"/></svg></span>
+                    </a>
+                    <div class="tlist__float" aria-hidden="true">
+                        <img src="assets/img/botox-700.webp" alt="" loading="lazy" data-index="0">
+                        <img src="assets/img/bio-700.webp" alt="" loading="lazy" data-index="1">
+                        <img src="assets/img/skinbooster-700.webp" alt="" loading="lazy" data-index="2">
+                    </div>
+                </div>
             </div>
         </section>
 
@@ -385,7 +391,7 @@
                     <figure class="about__main" data-reveal="img">
                         <img src="assets/img/dra-gerlany-retrato-800.webp" srcset="assets/img/dra-gerlany-retrato-800.webp 800w, assets/img/dra-gerlany-retrato.webp 1400w" sizes="(max-width: 900px) 90vw, 45vw" alt="Dra. Gerlany Melo, biomédica especialista em estética avançada" loading="lazy" width="1400" height="1389" data-parallax="-0.05">
                     </figure>
-                    <figure class="about__float" data-reveal="img" data-parallax-el="0.1">
+                    <figure class="about__float" data-reveal="img" data-tilt data-parallax-el="0.1">
                         <img src="assets/img/dra-gerlany-clinica.webp" alt="Dra. Gerlany Melo atendendo uma paciente na clínica" loading="lazy" width="807" height="695">
                     </figure>
                     <div class="about__badge" data-reveal>
@@ -425,12 +431,12 @@
                 <h2 class="h2" data-split>Um cuidado <em>exclusivo,</em> do acolhimento ao resultado.</h2>
             </div>
             <div class="gallery__rail" data-drift>
-                <figure class="gallery__item gallery__item--tall"><img src="assets/img/dra-gerlany-consultorio.webp" alt="Dra. Gerlany Melo no consultório" loading="lazy" width="454" height="755"><figcaption>Consultório</figcaption></figure>
-                <figure class="gallery__item"><img src="assets/img/dra-gerlany-sofa.webp" alt="Dra. Gerlany Melo em retrato profissional" loading="lazy" width="579" height="421"><figcaption>Atendimento</figcaption></figure>
-                <figure class="gallery__item gallery__item--tall"><img src="assets/img/dra-gerlany-editorial.webp" alt="Retrato editorial da Dra. Gerlany Melo" loading="lazy" width="539" height="767"><figcaption>Editorial</figcaption></figure>
-                <figure class="gallery__item"><img src="assets/img/dra-gerlany-sorriso.webp" alt="Dra. Gerlany Melo sorrindo" loading="lazy" width="442" height="404"><figcaption>Acolhimento</figcaption></figure>
-                <figure class="gallery__item gallery__item--tall"><img src="assets/img/dra-gerlany-evento.webp" alt="Dra. Gerlany Melo em evento" loading="lazy" width="694" height="767"><figcaption>Eventos</figcaption></figure>
-                <figure class="gallery__item"><img src="assets/img/dra-gerlany-clinica.webp" alt="Dra. Gerlany Melo durante procedimento" loading="lazy" width="807" height="695"><figcaption>Procedimentos</figcaption></figure>
+                <figure data-tilt class="gallery__item gallery__item--tall"><img src="assets/img/dra-gerlany-consultorio.webp" alt="Dra. Gerlany Melo no consultório" loading="lazy" width="454" height="755"><figcaption>Consultório</figcaption></figure>
+                <figure data-tilt class="gallery__item"><img src="assets/img/dra-gerlany-sofa.webp" alt="Dra. Gerlany Melo em retrato profissional" loading="lazy" width="579" height="421"><figcaption>Atendimento</figcaption></figure>
+                <figure data-tilt class="gallery__item gallery__item--tall"><img src="assets/img/dra-gerlany-editorial.webp" alt="Retrato editorial da Dra. Gerlany Melo" loading="lazy" width="539" height="767"><figcaption>Editorial</figcaption></figure>
+                <figure data-tilt class="gallery__item"><img src="assets/img/dra-gerlany-sorriso.webp" alt="Dra. Gerlany Melo sorrindo" loading="lazy" width="442" height="404"><figcaption>Acolhimento</figcaption></figure>
+                <figure data-tilt class="gallery__item gallery__item--tall"><img src="assets/img/dra-gerlany-evento.webp" alt="Dra. Gerlany Melo em evento" loading="lazy" width="694" height="767"><figcaption>Eventos</figcaption></figure>
+                <figure data-tilt class="gallery__item"><img src="assets/img/dra-gerlany-clinica.webp" alt="Dra. Gerlany Melo durante procedimento" loading="lazy" width="807" height="695"><figcaption>Procedimentos</figcaption></figure>
             </div>
         </section>
 
@@ -444,6 +450,14 @@
                         </span>
                         <h2 class="h2" data-split>A transformação de quem <em>confiou em nosso método.</em></h2>
                         <p class="section-head__text" data-reveal>Avaliações reais de pacientes que vivenciaram a experiência do Botox Estratégico.</p>
+                        <div class="proof" data-reveal>
+                            <div class="avatars">
+                                <img src="cli1.png" alt="" width="90" height="90" loading="lazy">
+                                <img src="cli2.png" alt="" width="90" height="90" loading="lazy">
+                                <img src="cli3.png" alt="" width="90" height="90" loading="lazy">
+                            </div>
+                            <p>Amada por pacientes em Fortaleza</p>
+                        </div>
                     </div>
                     <div class="reviews__nav" data-reveal>
                         <button type="button" class="round-btn" data-reviews-prev aria-label="Depoimento anterior"><svg class="icon" style="transform:scaleX(-1)"><use href="#i-arrow"/></svg></button>
@@ -452,9 +466,9 @@
                 </div>
             </div>
 
-            <div class="reviews__scroller" data-reviews>
+            <div class="reviews__scroller" data-reviews data-cursor="Arraste">
                 <div class="reviews__track">
-                    <figure class="review" data-reveal>
+                    <figure data-tilt class="review" data-reveal>
                         <span class="review__mark" aria-hidden="true">“</span>
                         <blockquote>Foi maravilhosa, atendimento no horário, respeito com o cliente, higiene, um <strong>ambiente relaxante</strong>, além da profissional muito competente, preparada e ciente daquilo que faz, experiência sem igual.</blockquote>
                         <figcaption>
@@ -462,7 +476,7 @@
                             <span><strong>Ribamar Melo</strong><small>5 meses atrás</small></span>
                         </figcaption>
                     </figure>
-                    <figure class="review review--accent" data-reveal>
+                    <figure data-tilt class="review review--accent" data-reveal>
                         <span class="review__mark" aria-hidden="true">“</span>
                         <blockquote>A melhor biomédica e esteticista dessa cidade. <strong>Competente e honesta</strong>, amo o seu trabalho, seu espaço acolhedor e seu atendimento. Recomendo demais!!</blockquote>
                         <figcaption>
@@ -470,7 +484,7 @@
                             <span><strong>Mariana Costa</strong><small>5 meses atrás</small></span>
                         </figcaption>
                     </figure>
-                    <figure class="review" data-reveal>
+                    <figure data-tilt class="review" data-reveal>
                         <span class="review__mark" aria-hidden="true">“</span>
                         <blockquote>Uma excelente profissional, muito atenciosa e os <strong>procedimentos são impecáveis</strong>, sempre me surpreendo 🥰</blockquote>
                         <figcaption>
@@ -478,7 +492,7 @@
                             <span><strong>Thays Vitoria</strong><small>5 meses atrás</small></span>
                         </figcaption>
                     </figure>
-                    <figure class="review" data-reveal>
+                    <figure data-tilt class="review" data-reveal>
                         <span class="review__mark" aria-hidden="true">“</span>
                         <blockquote>Uma profissional excepcional. <strong>Ambiente limpo, organizado, agradável e muito acolhedor.</strong></blockquote>
                         <figcaption>
@@ -623,6 +637,10 @@
         </div>
         <div class="footer__word" aria-hidden="true">Gerlany <em>Melo</em></div>
     </footer>
+
+    <!-- Custom cursor (desktop) -->
+    <div class="cursor-dot" aria-hidden="true"></div>
+    <div class="cursor-ring" aria-hidden="true"><span class="cursor-ring__label"></span></div>
 
     <!-- Floating WhatsApp -->
     <a href="https://wa.me/5585999656010?text=Ol%C3%A1,%20gostaria%20de%20agendar%20uma%20avalia%C3%A7%C3%A3o." target="_blank" rel="noopener" aria-label="Falar no WhatsApp" class="wa-float">
