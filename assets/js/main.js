@@ -94,7 +94,7 @@
 
     /* ---------- 3. Reveal on scroll ---------- */
     // stagger siblings that reveal together
-    document.querySelectorAll('.treatments__track, .reviews__track, .compare').forEach(function (group) {
+    document.querySelectorAll('.treatments__track, .reviews__track, .compare, .tlist').forEach(function (group) {
         var items = group.querySelectorAll(':scope > [data-reveal]');
         items.forEach(function (it, idx) { it.style.setProperty('--d', (idx * 0.12) + 's'); });
     });
@@ -477,6 +477,39 @@
             ring.style.transform = 'translate3d(' + rx.toFixed(1) + 'px,' + ry.toFixed(1) + 'px,0)';
             requestAnimationFrame(cursorLoop);
         })();
+    }
+
+
+    /* ---------- 19. Treatments hover list: image follows cursor ---------- */
+    var tlist = document.querySelector('[data-tlist]');
+    if (tlist && canHover) {
+        var fl = tlist.querySelector('.tlist__float');
+        var flImgs = fl.querySelectorAll('img');
+        var fx = 0, fy = 0, ftx = 0, fty = 0, frot = 0, fActive = false, fRunning = false;
+        flImgs.forEach(function (im) { im.loading = 'eager'; });
+        tlist.querySelectorAll('.tlist__row').forEach(function (row) {
+            row.addEventListener('mouseenter', function () {
+                var idx = row.getAttribute('data-index');
+                flImgs.forEach(function (im) { im.classList.toggle('is-active', im.getAttribute('data-index') === idx); });
+            });
+        });
+        tlist.addEventListener('mousemove', function (e) {
+            var r = tlist.getBoundingClientRect();
+            ftx = e.clientX - r.left; fty = e.clientY - r.top;
+            if (!fActive) { fx = ftx; fy = fty; fActive = true; tlist.classList.add('is-hovering'); }
+            if (!fRunning) { fRunning = true; requestAnimationFrame(floatLoop); }
+        });
+        tlist.addEventListener('mouseleave', function () {
+            fActive = false; tlist.classList.remove('is-hovering');
+            flImgs.forEach(function (im) { im.classList.remove('is-active'); });
+        });
+        function floatLoop() {
+            var px = fx;
+            fx = lerp(fx, ftx, 0.13); fy = lerp(fy, fty, 0.13);
+            frot = lerp(frot, Math.max(-12, Math.min(12, (fx - px) * 0.5)), 0.12);
+            fl.style.transform = 'translate3d(' + fx.toFixed(1) + 'px,' + fy.toFixed(1) + 'px,0) rotate(' + frot.toFixed(2) + 'deg)';
+            if (fActive || Math.abs(fx - ftx) > 0.5) requestAnimationFrame(floatLoop); else fRunning = false;
+        }
     }
 
     /* ---------- 11. Year ---------- */
